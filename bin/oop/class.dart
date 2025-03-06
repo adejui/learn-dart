@@ -18,12 +18,20 @@ class Person {
 
 }
 
+extension SayGoodByeOnPerson on Person {
+
+  void sayGoodBye(String paramName) {
+    print('Good Bye $paramName, from $name');
+  }
+}
+
 void main() {
 
   var person = Person();
   person.name = "Guler";
 
   person.sayHello('Budi');
+  person.sayGoodBye('Valverde');
 
   var person1 = Person();
   person1.name = "Arda Guler";
