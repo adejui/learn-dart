@@ -8,8 +8,14 @@ class Car {
   }
 }
 
-class Avanza implements Car {
+abstract class HasBrand {
+  String getBrand();
+}
+
+class Avanza implements Car, HasBrand {
   String name = "Avanza";
+
+  String getBrand() => "Toyota";
 
   void drive() {
     print('Avanza is running');
